@@ -1,9 +1,8 @@
 <!-- docs/_sidebar.md -->
 
 * [开始](/)
-
-* [前端内容](/)
-  * [html](/html)
-
+* [html](/docs/html.md)
+* [ES6](/docs/es6/chap1.md)
+  * [let 和 const 命令](/docs/es6/chap1.md)
 * [Guide](guide.md)
   * [路由管理](guide.md)

@@ -1,3 +1,3 @@
 # Headline
 
-> An awesome project.
+> 开启学习之旅，skr~

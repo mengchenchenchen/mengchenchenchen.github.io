@@ -1,6 +1,9 @@
 <!-- docs/_sidebar.md -->
 
+* [开始](/)
+
 * [前端内容](/)
   * [html](/html)
+
 * [Guide](guide.md)
-  - 设计模式
+  * [路由管理](guide.md)

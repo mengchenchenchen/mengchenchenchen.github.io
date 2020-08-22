@@ -1,5 +1,13 @@
 # css部分
 
+* 问题：五大浏览器所对应的内核：
+* 答案：
+  * IE浏览器 => Trident 内核
+  * Chrome浏览器 => webkit(旧) / Blink(新)
+  * FireFox浏览器 => Gecko 
+  * safari浏览器 => webkit
+  * opera浏览器 => webkit(旧)/Blink(新)
+
 * 问题：说一下css盒模型
 
 * 答案：盒模型分为标准模型和怪异模型（IE盒模型）：
@@ -51,5 +59,48 @@
   
 * 问题：rem原理
 
-*	答案：rem布局的本质是等比缩放，一般是基于宽度，假设将屏幕分为100份，每份宽度是1rem，1rem的宽度是屏幕宽度/100,然后子元素设置rem单位的属性。
+* 答案：rem布局的本质是等比缩放，一般是基于宽度，假设将屏幕分为100份，每份宽度是1rem，1rem的宽度是屏幕宽度/100,然后子元素设置rem单位的属性。通过改变html元素的字体大小，就可以设置子元素的实际大小。
+
+* 问题：实现三栏布局（两侧定宽，中间自适应）
+
+* 答案：五种解决方式：
+
+  * 1 flex布局 ：
+
+    
+    ```html
+    //html
+    <div class="box">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+    ```
+    
+    ```css
+    //css
+    .box{
+            display: flex;
+            justify-items: center;
+            height: 200px;
+        }
+        .left{
+            /* height: 100%; */
+            width: 200px;
+            background-color: red;
+        }
+        .center{
+            background-color: blue;
+            height: 100%;
+            flex:1;
+    }
+        .right{
+            background-color: pink;
+            width: 200px;
+            /* height: 100%; */
+        }
+    
+    ```
+    
+  * 2 浮动方式，此方式 content 必须放在最下边
 

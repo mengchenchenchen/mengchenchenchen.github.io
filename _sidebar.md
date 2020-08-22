@@ -2,6 +2,8 @@
 
 * [开始](/)
 * [html](/docs/html.md)
+* [flex](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+  * [flex](/docs/flex/flex.md)
 * [ES6](https://es6.ruanyifeng.com/)
   * [let 和 const 命令](/docs/es6/chap1.md)
 * [面试]()

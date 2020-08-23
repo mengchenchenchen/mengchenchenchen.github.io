@@ -1,27 +1,34 @@
 # css部分
 
-* 问题：五大浏览器所对应的内核：
-* 答案：
-  * IE浏览器 => Trident 内核
-  * Chrome浏览器 => webkit(旧) / Blink(新)
-  * FireFox浏览器 => Gecko 
-  * safari浏览器 => webkit
-  * opera浏览器 => webkit(旧)/Blink(新)
+- 常见内核
+  - IE : Trident (IE6~IE11)
+  - Chrome : Webkit -> Blink
+  - FireFox : Gecko
+  - Opera : Presto -> Webkit -> Blink
+  - Safari: Webkit
 
-* 问题：说一下css盒模型
+- 浏览器前缀
+  - `-webkit-` : Google Chrome, Safari, Android Browser
+  - `-moz-`    : Firefox
+  - `-o-`      : Opera
+  - `-ms-`     : Internet Explorer, Edge
+  - 现在一般由 `autoprefix` 自动补全
 
-* 答案：盒模型分为标准模型和怪异模型（IE盒模型）：
-  * 标准盒模型：盒模型的宽高只是内容（content）的宽高；
-  * 怪异盒模型：盒模型的宽高是内容（content）+ 内边距（padding）+ 外边距（margin）的总宽高；
   
-* 问题：css如何设置两种模型
-
+- 简单判断用户的浏览器类型,通过`navigator.userAgent`
+  - 判断[IE](https://juejin.im/post/6844903940719378446)
+  - 判断微信
   ```js
-  //标准模型
-  box-sizing:content-box;
-//IE模型
-  box-sizing:border-box;
+    const isWechat =  navigator.userAgent.toLowerCase().includes('micromessenger')
   ```
+
+
+- css盒模型: 盒模型分为`标准模型`和`IE盒模型`
+  - 标准盒模型:包含`content`为边界的宽高
+    - `box-sizing:content-box`
+  - IE盒模型:包含`border`为边界的总宽高
+    - `box-sizing:border-box`
+  
   
 * 问题：有没有遇到过边距重叠，怎么解决边距重叠问题
   
@@ -46,7 +53,7 @@
   * 什么是BFC
     * BFC是（block formatting context）格式化上下文，是web页面盒布局模型的css渲染模式，值得是一个独立的渲染区域或者说是一个隔离的独立容器。
   * 形成BFC 的条件
-    *  浮动元素，float除了none意外的值；
+    * 浮动元素，float除了none以外的值；
     * 定位元素，position（absolute，fixed）
     * display为以下其中之一的值inline-block，table-cell，table-caption
     * overflow除了visible以外的值（hidden，auto，scroll）
@@ -57,9 +64,14 @@
     *	计算bfc的高度时，浮动元素也参与计算；
     *	bfc就是页面上的一个独立容器，容器里面的子元素不会影响外面的元素；
   
-* 问题：rem原理
 
-* 答案：rem布局的本质是等比缩放，一般是基于宽度，假设将屏幕分为100份，每份宽度是1rem，1rem的宽度是屏幕宽度/100,然后子元素设置rem单位的属性。通过改变html元素的字体大小，就可以设置子元素的实际大小。
+- 移动端字体、布局自适应方案
+  - rem : 将`html`节点的`fontSize`,作为一个rem单位的基准,通过动态改变`html`节点的`fontSize`,可以改变所有使用rem单位的css属性的大小
+    - 动态改变的方法有:
+      - js 计算
+      - 媒体查询
+      - 使用 vw
+  - vw/wh : 100vw 就是 100%的视窗宽度
 
 * 问题：实现三栏布局（两侧定宽，中间自适应）
 
@@ -78,7 +90,6 @@
     ```
     
     ```css
-    //css
     .box{
             display: flex;
             justify-items: center;

@@ -1,6 +1,7 @@
 # css部分
 
 * 问题：五大浏览器所对应的内核：
+
 * 答案：
   * IE浏览器 => Trident 内核
   * Chrome浏览器 => webkit(旧) / Blink(新)
@@ -104,3 +105,73 @@
     
   * 2 浮动方式，此方式 content 必须放在最下边
 
+    ```html
+    <div class="box2">
+        <div class="left2"></div>
+        <div class="right2"></div>
+        <div class="center2"></div>
+        <!--块级元素换行,所以center放在最后，left，rightfloat 脱离文档流-->
+    </div>
+    ```
+    
+    ```css
+    .box2{
+            height: 200px;
+        }
+        .left2{
+            width: 200px;
+            background-color: green;
+            height: 100%;
+            float: left;
+        }
+        .center2{
+            background-color: orange;
+            height: 100%;
+        }
+        .right2{
+            width: 200px;
+            background-color:red;
+            float: right;
+            height: 100%;
+        }
+    ```
+
+  * 绝对定位方式实现
+
+    ```html
+    <div class="box3">
+        <div class="left3"></div>
+        <div class="center3"></div>
+        <div class="right3"></div>
+    </div>
+    ```
+
+    ```css
+    .box3{
+            height: 200px;
+            position: relative;
+        }
+        .left3{
+            height: 100%;
+            position: absolute;
+            left: 0;
+            width: 200px;
+            background-color:#837847;
+        }
+        .center3{
+            height: 100%;
+            position: absolute;
+            background-color: black;
+            left: 200px;
+            right: 200px;
+        }
+        .right3{
+            width: 200px;
+            height: 100%;
+            position: absolute;
+            background-color:grey;
+            right: 0px;
+        }
+    ```
+
+  * 

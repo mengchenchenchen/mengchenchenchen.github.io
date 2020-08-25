@@ -117,4 +117,43 @@
       </script>
     </script>
 
-  * 2 浮动方式，此方式 content 必须放在最下边
+  - 2 浮动方式，此方式 content 必须放在最下边
+    <vuep template="#example"></vuep>
+
+    <script v-pre type="text/x-template" id="example">
+      <style scoped>
+        .wx-wrapper {
+          width: 100%;
+          height:200px;
+        }
+        .left {
+          width: 50px;
+          background-color: blue;
+        }
+        .right {
+          width: 100px;
+          background-color: yellow;
+        }
+        .center {
+          flex: 1 1 auto;
+          background-color: yellowgreen;
+        }
+      </style>
+      <template>
+        <div class="wx-wrapper">
+          <div class="left">left</div>
+          <div class="right">right</div>
+          <div class="center">center</div>
+        </div>
+      </template>
+
+      <script>
+        module.exports = {
+          data () {
+            return { }
+          }
+        }
+      </script>
+    </script>
+
+

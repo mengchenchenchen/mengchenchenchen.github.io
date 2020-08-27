@@ -1,4 +1,4 @@
-# felx
+# [flex](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 
 * flex 布局 为弹性布局，任何一个容器都可以成为flex布局：
 

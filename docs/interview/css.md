@@ -88,16 +88,16 @@
           justify-content: space-between;
         }
         .left {
-          width: 50px;
+          width: 100px;
           background-color: blue;
         }
         .right {
           width: 100px;
-          background-color: yellow;
+          background-color: red;
         }
         .center {
           flex: 1 1 auto;
-          background-color: yellowgreen;
+          background-color: pink;
         }
       </style>
       <template>
@@ -127,16 +127,16 @@
           height:200px;
         }
         .left {
-          width: 50px;
+          width: 100px;
           background-color: blue;
         }
         .right {
           width: 100px;
-          background-color: yellow;
+          background-color: red;
         }
         .center {
           flex: 1 1 auto;
-          background-color: yellowgreen;
+          background-color: pink;
         }
       </style>
       <template>
@@ -155,5 +155,93 @@
         }
       </script>
     </script>
+    
+  - 绝对定位方式实现
+  <vuep template="#example"></vuep>
+
+    <script v-pre type="text/x-template" id="example">
+      <style scoped>
+        .wx-wrapper {
+          height:200px;
+          position:relative;
+        }
+        .left {
+          position:absolute;
+          width: 100px;
+          background-color: blue;
+          left:0;
+        }
+        .right {
+          position:absolute;
+          width: 100px;
+          right:0;
+          background-color: red;
+        }
+        .center {
+          position:absolute;
+          left:100px;
+          right:100px;
+          background-color: pink;
+        }
+      </style>
+      <template>
+        <div class="wx-wrapper">
+          <div class="left">left</div>
+          <div class="center">center</div>
+          <div class="right">right</div>
+        </div>
+      </template>
+
+      <script>
+        module.exports = {
+          data () {
+            return { }
+          }
+        }
+      </script>
+    </script>
+
+  - 表格布局实现方式（有问题）
+  <vuep template="#example"></vuep>
+
+    <script v-pre type="text/x-template" id="example">
+      <style scoped>
+        .left4{
+          width: 200px;
+          background-color: red;
+          display: table-cell;
+        }
+        .center4{
+          background-color: yellow;
+          display: table-cell;
+        }
+        .right4{
+          width: 200px;
+          background-color: green;
+          display: table-cell;
+        }
+      </style>
+      <template>
+          <div class="box4">
+          <div class="left4"></div>
+          <div class="center4"></div>
+          <div class="right4"></div>
+      </div>
+      </template>
+
+      <script>
+        module.exports = {
+          data () {
+            return { }
+          }
+        }
+      </script>
+    </script>
+
+
+  
+    
+  
+  
 
 

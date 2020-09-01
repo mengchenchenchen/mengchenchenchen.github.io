@@ -201,11 +201,16 @@
       </script>
     </script>
 
-  - 表格布局实现方式（有问题）
+  - 表格布局实现方式
   <vuep template="#example"></vuep>
 
     <script v-pre type="text/x-template" id="example">
       <style scoped>
+      	.box4{
+          width: 100%;
+          display: table;
+          height: 200px;
+        }
         .left4{
           width: 200px;
           background-color: red;
@@ -223,12 +228,13 @@
       </style>
       <template>
           <div class="box4">
-          <div class="left4"></div>
+      <div class="left4"></div>
           <div class="center4"></div>
           <div class="right4"></div>
       </div>
       </template>
-
+    
+    
       <script>
         module.exports = {
           data () {
@@ -239,13 +245,35 @@
     </script>
     
   - grid 布局方式
-  
+
     ```css
+    .box5 {
+            display: inline-grid;
+            width: 100%;
+            grid-template-columns: 200px auto 200px;
+            grid-template-rows: 200px;
+        }
     
+        .left5 {
+            background-color: blue;
+        }
+    
+        .center5 {
+            background-color: red;
+        }
+    
+        .right5 {
+            background-color: pink;
+        }
     ```
-  
-    
-  
+
+    ```html
+    <div class="box5">
+            <div class="left5"></div>
+            <div class="center5"></div>
+            <div class="right5"></div>
+        </div>
+    ```
 
 
 

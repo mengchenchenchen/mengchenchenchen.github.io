@@ -9,5 +9,6 @@
   * [let 和 const 命令](/docs/es6/chap1.md)
 * [面试]()
   * [css](/docs/interview/css.md)
+  * [js](/docs/interview/js.md)
 * [Guide](guide.md)
   * [路由管理](guide.md)

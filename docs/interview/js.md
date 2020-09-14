@@ -61,3 +61,27 @@
   - `call`的传参方式：`fn.call(this,1,2,3)`
   - `apply`的传参方式：`fn.apply(this,[1,2,3])`
   - `bind`的返回值为一个新的函数，需要再次调用：`fn.bind(this)(1,2,3)`
+
+- 手动`call`的方法：
+<vuep template="#example"></vuep>
+<script v-pre type="text/x-template" id="example">
+  <template>
+      <div class="box4">
+  <div class="left4"></div>
+      <div class="center4"></div>
+      <div class="right4"></div>
+  </div>
+  </template>
+    
+  <script>
+    module.exports = {
+      data () {
+        return {}
+      }
+    }
+  </script>
+
+  <style scoped>
+    
+  </style>
+  </script>

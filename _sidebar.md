@@ -7,6 +7,8 @@
   * [grid](/docs/layout/grid.md)
 * [ES6](https://es6.ruanyifeng.com/)
   * [let 和 const 命令](/docs/es6/chap1.md)
+* [git](https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496)
+  * [git](/docs/git/git.md)
 * [面试]()
   * [css](/docs/interview/css.md)
   * [js](/docs/interview/js.md)

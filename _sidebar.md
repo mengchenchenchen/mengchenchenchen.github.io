@@ -14,3 +14,5 @@
   * [js](/docs/interview/js.md)
 * [Guide](guide.md)
   * [路由管理](guide.md)
+* [JS](/docs/Js)
+  * [typeScript](/docs/JS/typeScript.md)
